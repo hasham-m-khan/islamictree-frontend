@@ -1,6 +1,8 @@
 <template>
-  <div data-theme="bumblebee">
+  <div>
     <NuxtRouteAnnouncer />
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
