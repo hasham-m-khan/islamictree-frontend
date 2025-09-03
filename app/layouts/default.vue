@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="navbar shadow-sm">
+  <div class="navbar shadow-sm bg-base-200 fixed top-0 right-0 left-0 z-99">
     <div class="navbar-start">
       <div class="drawer">
         <input type="checkbox" id="menu" class="drawer-toggle">
@@ -14,14 +14,14 @@
           </label>
         </div>
 
-        <div class="drawer-side antialiased">
+        <div class="drawer-side">
           <label for="menu" aria-label="close sidebar" class="drawer-overlay"></label>
           <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
             <!-- Sidebar content here -->
             <div class="flex">
               <div class="flex items-center flex-1 mb-3">
                 <img src="/img/islamictree.svg" alt="Islamic Tree" width="24" height="24" />
-                <h2 class="text-xl font-[Patrick_Hand_SC] ms-2">ISLAMICTREE</h2>
+                <h2 class="font-[Borel] ms-2">IslamicTree</h2>
               </div>
               <div class="flex-none">
                 <icon name="lucide:x" />
@@ -77,10 +77,10 @@
                 </a>
               </li>
               <li class="mb-2">
-                <a>
+                <NuxtLink to="/articles/home">
                   <icon name="lucide:file-text" />
                   Articles
-                </a>
+                </NuxtLink>
               </li>
               <li class="mb-2">
                 <a>
@@ -94,9 +94,9 @@
       </div>
     </div>
     <div class="nav-center">
-      <button class="btn btn-success">Sign In</button>
     </div>
-    <div class="nav-end">
+    <div class="nav-end flex justify-end items-center flex-1">
+      <button class="btn btn-success">Sign In</button>
       <ul class="menu menu-horizontal rounded-box">
         <li><a href="#">
             <icon name="lucide:search" />
@@ -108,7 +108,9 @@
     </div>
   </div>
 
-  <slot />
+  <div class="p-3 mt-18">
+    <slot />
+  </div>
 
   <div class="dock shadow-sm">
     <button>

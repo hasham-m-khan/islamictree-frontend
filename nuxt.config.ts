@@ -19,4 +19,10 @@ export default defineNuxtConfig({
       '@tailwindcss/postcss': {},
     },
   },
+
+  runtimeConfig: {
+    public: {
+      apiBase: 'http://localhost:8080/api/v1/'
+    }
+  }
 });
